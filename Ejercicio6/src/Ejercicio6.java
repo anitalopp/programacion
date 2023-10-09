@@ -2,10 +2,10 @@
 public class Ejercicio6 {
 	public static void main(String[] args) {
 		
-		float numMetros= 25f;
-		int numHoras= 50;
-		int numMinutos= 90;
-		int numSegundos= 20;
+		float numMetros= 100f;
+		int numHoras= 3;
+		int numMinutos= 55;
+		int numSegundos= 29;
 		float velocidad;
 		
 		
