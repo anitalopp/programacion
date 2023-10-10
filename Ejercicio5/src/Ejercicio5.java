@@ -1,18 +1,16 @@
 
-public class ejercicio5 {
+public class Ejercicio5 {
 	public static void main(String[] args) {
 	
-			float num5= 5;
-			float num8= 8;
-			float num6= 6;
-			float num9= 9;
-			float num2= 2;
-			float num0= 0;
-			float num3= 3;
-			float num1= 1;
-			float num55= 55;
-			float num20= 20;
-			float num15= 15;
+			float num5= 5f;
+			float num8= 8f;
+			float num6= 6f;
+			float num9= 9f;
+			float num2= 2f;
+			float num3= 3f;
+			float num55= 55f;
+			float num20= 20f;
+			float num15= 15f;
 			
 			float resultado;
 			

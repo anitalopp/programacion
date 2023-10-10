@@ -12,7 +12,7 @@ public class Ejercicio6 {
 	velocidad= numMetros / (numSegundos + (numMinutos * 60)+(numHoras * 3600)) ;
 	
 
-	System.out.println("La velocidad en la que se ha recorrido los 25 metros es : " + velocidad + " metros/segundo");
+	System.out.println("La velocidad en la que se ha recorrido los 25 metros es " + velocidad + " metros/segundo");
 
 
 	}
