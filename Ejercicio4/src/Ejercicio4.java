@@ -2,7 +2,7 @@
 public class Ejercicio4 {
 	public static void main (String [] args) {
 		
-		int anos = 1996;
+		int anos = 2023;
 		
 		if (anos % 400 == 0) {
 			System.out.println("El año es bisiesto");			
