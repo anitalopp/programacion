@@ -1,11 +1,10 @@
-
 public class Ejercicio5 {
 	public static void main (String [] args) {
 		
 		float altura = 190;
 		boolean esMujer = false;
 		
-		if (esMujer) {
+		if (esMujer == false) {
 			System.out.println("Es mujer");
 			if (altura <= 135) {
 				System.out.println("La mujer es enana");
