@@ -7,19 +7,20 @@ public class Ejercicio29 {
 		int estadio = 3;
 		int contador = 0;
 		
-		if (edad <59 & edad >40) {
-			contador ++;
-		}
+		if (edad >= 40 && edad <= 59) {
+            contador += 1;
+        } else if (edad >= 60 && edad <= 79) {
+            contador += 2;
+        } else if (edad >= 80) {
+            contador += 4;
+        }
 		if (esNegro) {
-			contador ++;
+			contador += 1;
 		} 
 		if (estadio == 3 & estadio == 4) {
 			contador += 2;
 		} 
-		if (edad >=80) {
-			contador += 4;
-		}
-		
+	
 		switch (contador) {
 		case 0: case 1:
 			System.out.println("Riesgo alto de supervivencia");
