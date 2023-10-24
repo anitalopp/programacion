@@ -17,6 +17,6 @@ public class Ejercicio15 {
 			semilla1 = semilla2;
 			semilla2 = almacenarNumero;
 		}
-		System.out.print(".");
+		System.out.println(".");
 	}
 }
