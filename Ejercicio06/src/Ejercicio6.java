@@ -1,7 +1,7 @@
 
 public class Ejercicio6 {
 	public static void main (String [] args) {
-		
+	//TODO comparar directamente con letras
 		char letra = 'N';
 		int numero = letra;
 		
