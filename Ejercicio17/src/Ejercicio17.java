@@ -20,7 +20,7 @@ public class Ejercicio17 {
                 break;
             case '/':
                 if (num2 == 0) {
-                    System.out.println("Error: División por cero.");
+                    System.err.println("Error: División por cero.");
                     operacionCorrecta = false;
                 } else {
                     resultado = num1 / num2;

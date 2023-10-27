@@ -6,7 +6,7 @@ public class Ejercicio13 {
         System.out.println("El resultado de la tabla de multiplicación del " + numero + " es: ");
         System.out.println("==========================================");
         for (int i = 1; i <= 10; i++) {
-            System.out.printf("%d x %d = %d%n", numero, i, numero * i);
+            System.out.println(numero + " x " + i + " = " + numero * i);
         } 
     }
 }

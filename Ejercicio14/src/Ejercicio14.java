@@ -12,10 +12,11 @@ public class Ejercicio14 {
                 if (j < 10) {
                     System.out.print(", ");
                 } else {
+                	System.out.println(); 
                 }
             }
             
-            System.out.println(); 
+            
         }
     }
 }

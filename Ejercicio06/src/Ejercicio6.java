@@ -1,16 +1,14 @@
 
 public class Ejercicio6 {
-	public static void main (String [] args) {
-	//TODO comparar directamente con letras
-		char letra = 'N';
-		int numero = letra;
+	public static void main (String[] args) {
 		
-		System.out.println(numero);
-		if (numero >= 65 && numero <= 90) {
-			System.out.println("La letra es mayúscula");} 
-		else if (numero >= 97 && numero <= 122){
-			System.out.println("La letra es minúscula");} 
-		else {
+		char letra = 'N';
+	
+		if (letra >= 'A' && letra <= 'Z') {
+			System.out.println("La letra " + letra + " es mayúscula");
+		} else if (letra >= 'a' && letra <= 'z') {
+			System.out.println("La letra es minúscula");
+		} else {
 			System.out.println("No es una letra");
 		}
 	}

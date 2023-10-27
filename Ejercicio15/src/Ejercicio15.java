@@ -13,10 +13,10 @@ public class Ejercicio15 {
 		System.out.print(semilla1 + ", " + semilla2);
 		for (int i = 2; i < limite; i++) {
 			almacenarNumero = semilla1 + semilla2;
-			System.out.print(". " + almacenarNumero);
+			System.out.print(", " + almacenarNumero);
 			semilla1 = semilla2;
 			semilla2 = almacenarNumero;
 		}
-		System.out.println(".");
+		System.out.println(" ");
 	}
 }
