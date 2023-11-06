@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class Principal {
 
@@ -29,5 +30,28 @@ public class Principal {
 		Venta venta =  new Venta (cliente1, l1, 1);
 		
 		venta.registraVenta();
+		
+//		float valor l2.convertirEurosADolares(4.5f);
+		
+		UtilidadesCambioMonedas.convertirEurosaDolares(4.5f);
+							
+		Scanner sc = new Scanner(System.in);
+			
+		System.out.println("por favor, digame el nombre del cliente ");
+			
+		String nombre = sc.nextLine();
+					
+		System.out.println("Por favor, dígame la edad del cliente");
+		int edad = sc.nextInt();
+		sc.nextLine();
+			
+		System.out.println("Por favor, dígame la ciudad del cliente ");
+		String ciudad = sc.nextLine();
+		
+		Cliente cliente3 = new Cliente(nombre, edad, ciudad);
+						
+		
+
+	
 	}
 }

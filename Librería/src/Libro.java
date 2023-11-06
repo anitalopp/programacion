@@ -42,7 +42,13 @@ public class Libro {
 		} else {
 			return this.precio;
 		}
-			
-		}
+		
+		
+	}
+		
+		public float convertirEurosADolares(float euros) {
+			return euros * 1.2f;
+		
+		} 
 }
 	
