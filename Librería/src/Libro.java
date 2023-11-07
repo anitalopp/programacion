@@ -23,7 +23,7 @@ public class Libro {
 		this.autor = autor;
 	} 
 	
-	public String getAutor() {
+	public String gsetAutor() {
 		return this.autor;
 	}
 	
