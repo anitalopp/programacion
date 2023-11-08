@@ -16,11 +16,6 @@ public class Principal {
 		
 		System.out.println("Por favor, dígame la ciudad del cliente ");
 		String ciudad = sc.nextLine();
-		
-	
-		
-		
-	
 
 	}
 }

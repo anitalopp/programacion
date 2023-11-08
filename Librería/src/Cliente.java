@@ -26,18 +26,19 @@ public class Cliente {
 			this.edad = edad;
 		}
 	}
+
 	public int getEdad() {
 		return this.edad;
 	}
-	
+
 	public void setCiudad(String ciudad) {
 		this.ciudad = ciudad;
 	}
-	
+
 	public String getCiudad() {
 		return this.ciudad;
 	}
-	
+
 	public boolean esVip() {
 		// Consulta a la base de datos cuánto ha gastado en el último año
 

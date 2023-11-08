@@ -6,11 +6,11 @@ public class LibroDAO {
 
 		System.out.println("Se han insertado " + cantidad + " libros del libro " + libro.getTitulo());
 	}
-	
+
 	public void borrarLibro(Libro libro) {
-		//código para borrar libro
-		
-		System.out.println("Se ha borrado el libro " +libro.getTitulo()+ " de la base de datos");
-		
+		// código para borrar libro
+
+		System.out.println("Se ha borrado el libro " + libro.getTitulo() + " de la base de datos");
+
 	}
 }

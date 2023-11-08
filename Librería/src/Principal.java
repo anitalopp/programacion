@@ -2,12 +2,12 @@ import java.util.Scanner;
 
 public class Principal {
 
-	public static void main (String [] args) {
-		
-	MenuPrincipal menuPrincipal = new MenuPrincipal ();
+	public static void main(String[] args) {
+
+		MenuPrincipal menuPrincipal = new MenuPrincipal();
 		MenuPrincipal mp = new MenuPrincipal();
 		mp.muetraMenuPrincipal();
-	
+
 //		Cliente cliente1 =  new Cliente ();
 //		Cliente cliente2 = new Cliente ();
 //		
@@ -57,6 +57,6 @@ public class Principal {
 //						
 //		
 //
-	
-	}	
+
+	}
 }
