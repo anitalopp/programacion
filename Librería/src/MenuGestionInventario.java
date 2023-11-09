@@ -19,26 +19,10 @@ public class MenuGestionInventario {
 
 			switch (opcion) {
 			case 1:
-				System.out.println("Por favor, introduzca el título del libro");
-				String titulo = sc.nextLine();
+				insertarLibro(sc);
 
-				System.out.println("Por favor, introduzca el precio del libro ");
-
-//				String precioString = sc.nextLine();
-//				float precio = Integer.parseInt(precioString);
-
-				float precion = sc.nextFloat();
-				System.out.println("Introduzca la cantidad de libros a insertar en el inventario");
-				int cantidad = Integer.parseInt(opcionString);
-
-//				String cantidadString = sc.nextLine();
-//				int cantidad = Integer.parseInt(cantidadString);
-
-				// Creamos el objeto libro
-
-				LibroDAO libroDao = new libroDAO();
-				libroDao.insertarLibros(null, cantidad);
 				break;
+
 			case 2:
 				// TODO: borrar libro
 				break;
@@ -49,5 +33,15 @@ public class MenuGestionInventario {
 				System.out.println("Opción incorrecta, la elección debe ser entre 1 y 3");
 			}
 		} while (opcion != 3);
+	}
+
+	private void insertarLibro(Scanner sc) {
+		Libro libro = UtilidadesCreacionDeObjetos.crearLibro(sc);
+
+		System.out.println("Introduzca la cantidad de libros a insertar ");
+		int cantidad = Integer.parseInt(sc.nextLine());
+
+		LibroDAO libroDAO = new LibroDAO();
+		libroDAO.insertarLibros(libro, cantidad);
 	}
 }

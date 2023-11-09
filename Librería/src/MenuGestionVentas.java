@@ -30,7 +30,7 @@ public class MenuGestionVentas {
 				return;
 			default:
 				System.out.println("Opción incorrecta: Las opciones válidas son 1 y 2");
-			} 
+			}
 
 		} while (opcion != 2);
 
@@ -50,17 +50,7 @@ public class MenuGestionVentas {
 
 		Cliente c = new Cliente(nombre, edad, ciudad);
 
-		System.out.println("Dígame el título del libro a comprar: ");
-		String titulo = sc.nextLine();
-
-		System.out.println("Dígame el precio del libro: ");
-		float precio = sc.nextFloat();
-		sc.nextLine();
-
-		System.out.println("Dígame el autor del libro: ");
-		String autor = sc.nextLine();
-
-		Libro libro = new Libro(titulo, autor, precio);
+		Libro libro = UtilidadesCreacionDeObjetos.crearLibro(sc);
 
 		System.out.println("Dígame la cantidad de libros a comprar: ");
 		int cantidad = sc.nextInt();
