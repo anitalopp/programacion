@@ -50,13 +50,13 @@ public class MenuGestionVentas {
 
 		Cliente c = new Cliente(nombre, edad, ciudad);
 
-		Libro libro = UtilidadesCreacionDeObjetos.crearLibro(sc);
+		Libro l = UtilidadesCreacionDeObjetos.crearLibro(sc);
 
 		System.out.println("Dígame la cantidad de libros a comprar: ");
 		int cantidad = sc.nextInt();
 		sc.nextLine();
 
-		Venta venta = new Venta(c, libro, cantidad);
+		Venta venta = new Venta(c, l, cantidad);
 		venta.registraVenta();
 	}
 }
