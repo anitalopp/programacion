@@ -20,11 +20,9 @@ public class MenuGestionInventario {
 			switch (opcion) {
 			case 1:
 				insertarLibro(sc);
-
 				break;
-
 			case 2:
-				// TODO: borrar libro
+				borrarLibro(sc);
 				break;
 			case 3:
 				System.out.println("Volviendo a menú principal");
@@ -33,6 +31,12 @@ public class MenuGestionInventario {
 				System.out.println("Opción incorrecta, la elección debe ser entre 1 y 3");
 			}
 		} while (opcion != 3);
+	}
+
+	private void borrarLibro(Scanner sc) {
+		Libro libro = UtilidadesCreacionDeObjetos.crearLibro(sc);
+		LibroDAO libroDAO = new LibroDAO();
+		libroDAO.borrarLibro(libro);
 	}
 
 	private void insertarLibro(Scanner sc) {

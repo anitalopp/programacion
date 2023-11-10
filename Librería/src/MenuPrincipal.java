@@ -29,11 +29,13 @@ public class MenuPrincipal {
 				}
 			case 2:
 				// Mostramos submenú de gestión de inventario
-				System.out.println("Mostramos submenú de gestión de inventario");
+				MenuGestionInventario mi = new MenuGestionInventario();
+				mi.mostrarMenu();
 				break;
 			case 3:
 				// Mostramos submenú de gestión de descuentos
-				System.out.println("Mostramos submenú de gestión de descuentos");
+				MenuGestionDescuentos md = new MenuGestionDescuentos();
+				md.muestraMenu();
 				break;
 			case 4:
 				// Salimos

@@ -22,7 +22,6 @@ public class MenuGestionVentas {
 			switch (opcion) {
 			case 1:
 				realizarVenta(sc);
-
 				break;
 			case 2:
 				// Salimos
@@ -37,18 +36,7 @@ public class MenuGestionVentas {
 	}
 
 	private void realizarVenta(Scanner sc) {
-		// Hacemos una venta
-		System.out.println("Introduzca el nombre del cliente: ");
-		String nombre = sc.nextLine();
-
-		System.out.println("Introduzca la edad del cliente: ");
-		int edad = sc.nextInt();
-		sc.nextLine();
-
-		System.out.println("Introduzca la ciudad del cliente: ");
-		String ciudad = sc.nextLine();
-
-		Cliente c = new Cliente(nombre, edad, ciudad);
+		Cliente c = UtilidadesCreacionDeObjetos.crearCliente(sc);
 
 		Libro l = UtilidadesCreacionDeObjetos.crearLibro(sc);
 

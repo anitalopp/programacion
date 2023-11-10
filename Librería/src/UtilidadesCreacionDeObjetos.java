@@ -16,4 +16,20 @@ public class UtilidadesCreacionDeObjetos {
 		Libro libro = new Libro(titulo, autor, precio);
 		return libro;
 	}
+
+	public static Cliente crearCliente(Scanner sc) {
+		System.out.println("Introduzca el nombre del cliente: ");
+		String nombre = sc.nextLine();
+
+		System.out.println("Introduzca la edad del cliente: ");
+		int edad = sc.nextInt();
+		sc.nextLine();
+
+		System.out.println("Introduzca la ciudad del cliente: ");
+		String ciudad = sc.nextLine();
+
+		Cliente c = new Cliente(nombre, edad, ciudad);
+		return c;
+
+	}
 }
