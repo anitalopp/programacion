@@ -1,3 +1,6 @@
+package com.kike.libreria.modelo;
+
+import com.kiko.libreria.entidades.Libro;
 
 public class LibroDAO {
 

@@ -1,3 +1,5 @@
+package com.kiko.libreria.interfaces;
+
 import java.util.Scanner;
 
 public class MenuPrincipal {

@@ -1,4 +1,9 @@
+package com.kike.libreria.utils;
+
 import java.util.Scanner;
+
+import com.kiko.libreria.entidades.Cliente;
+import com.kiko.libreria.entidades.Libro;
 
 public class UtilidadesCreacionDeObjetos {
 
@@ -12,7 +17,6 @@ public class UtilidadesCreacionDeObjetos {
 		System.out.println("Por favor, introduzca el precio del libto ");
 		float precio = Float.parseFloat(sc.nextLine());
 
-		// Creamos el objeto libro
 		Libro libro = new Libro(titulo, autor, precio);
 		return libro;
 	}

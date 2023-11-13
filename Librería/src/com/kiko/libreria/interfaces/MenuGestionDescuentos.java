@@ -1,4 +1,10 @@
+package com.kiko.libreria.interfaces;
+
 import java.util.Scanner;
+
+import com.kike.libreria.utils.UtilidadesCreacionDeObjetos;
+import com.kiko.libreria.entidades.Cliente;
+import com.kiko.libreria.entidades.Libro;
 
 public class MenuGestionDescuentos {
 
