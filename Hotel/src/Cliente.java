@@ -4,11 +4,13 @@ public class Cliente {
 	private String nombre;
 	private String apellido;
 	private Habitacion habitacion;
-
+	
 	public Cliente(String dni, String nombre, String apellido) {
 		this.dni = dni;
 		this.nombre = nombre;
 		this.apellido = apellido;
+		this.habitacion = null;
+
 	}
 
 	public void setDni(String dni) {
@@ -37,5 +39,10 @@ public class Cliente {
 
 	public String getNombre() {
 		return null;
+	}
+
+	public void mostrarMenu() {
+		// TODO Auto-generated method stub
+		
 	}
 }
