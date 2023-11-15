@@ -1,4 +1,12 @@
+package com.ana.hotel.principal;
+
 import java.util.Scanner;
+
+import com.ana.hotel.entidades.Cliente;
+import com.ana.hotel.entidades.Habitacion;
+import com.ana.hotel.negocio.Reserva;
+
+
 
 public class MenuPrincipal {
 
@@ -6,8 +14,8 @@ public class MenuPrincipal {
 
         int opcion = 0;
         Scanner sc = new Scanner(System.in);
-        Cliente cliente = null;
-        Habitacion habitacion = null;
+        Cliente cliente;
+        Habitacion habitacion;
         Reserva reserva = new Reserva();
 
         do {
@@ -54,6 +62,7 @@ public class MenuPrincipal {
                 switch (opcion) {
                     case 1:
                         // Submenú de reserva de habitación
+
                         reserva.reservarHabitacion(cliente, habitacion);
                         break;
                     case 2:

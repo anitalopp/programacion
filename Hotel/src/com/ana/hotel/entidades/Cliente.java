@@ -1,3 +1,5 @@
+package com.ana.hotel.entidades;
+
 public class Cliente {
 
 	private String dni;
@@ -41,8 +43,6 @@ public class Cliente {
 		return null;
 	}
 
-	public void mostrarMenu() {
-		// TODO Auto-generated method stub
-		
+	public void mostrarMenu() {		
 	}
 }

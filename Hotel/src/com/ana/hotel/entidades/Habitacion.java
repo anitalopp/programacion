@@ -1,3 +1,4 @@
+package com.ana.hotel.entidades;
 
 public class Habitacion {
 	
@@ -9,6 +10,7 @@ public class Habitacion {
         this.numHabitacion = numHabitacion;
         this.numPlanta = numPlanta;
         this.esOcupada = false;
+        
     }
 	
 	public String getNumPlanta() {
