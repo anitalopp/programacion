@@ -2,6 +2,9 @@ import java.util.Scanner;
 
 import com.ana.finca.entidades.FincaCircular;
 import com.ana.finca.entidades.FincaRectangular;
+import com.ana.finca.menu.MenuFincaCircular;
+import com.ana.finca.menu.MenuFincaRectangular;
+import com.ana.finca.menu.MenuPoligonoRegular;
 import com.ana.finca.entidades.FincaPoligonoRegular;
 
 public class MenuPrincipal {
@@ -31,22 +34,21 @@ public class MenuPrincipal {
 
             switch (opcion) {
                 case 1:
-                    rectangular = new FincaRectangular();
-                    rectangular.Rectangular();
-                    break;
+                	MenuFincaRectangular mv = new MenuFincaRectangular();
+                	mv.mostrarMenu();
+                	break;
                 case 2:
-                    circular = new FincaCircular();
-                    circular.Circular();
+                    MenuFincaCircular mi = new MenuFincaCircular();
+                    mi.mostrarMenu();
                     break;
                 case 3:
-                	poligono = new FincaPoligonoRegular();
-                	poligono.Poligono();
+                	MenuPoligonoRegular md = new MenuPoligonoRegular();
+                	md.mostrarMenu();
                     break;
                 case 4:
-                    System.out.println("Saliendo del programa...");
                     break;
                 default:
-                    System.out.println("Opción incorrecta: El número debe estar comprendido entre 1 y 4");
+                    System.out.println("Opción incorrecta: El número debe estar comprendido entre 1 y 3");
             }
         } while (opcion != 4);
     }
