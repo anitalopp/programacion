@@ -15,7 +15,7 @@ public class MenuCreacionVehiculo {
         String matricula = sc.nextLine();
 
         while (matricula.trim().isEmpty()) {
-            System.out.println("ERROR, la matrícula no puede estar vacía");
+            System.err.println("ERROR, la matrícula no puede estar vacía");
             matricula = sc.nextLine();
         }
 
@@ -23,7 +23,7 @@ public class MenuCreacionVehiculo {
         String modelo = sc.nextLine();
 
         while (modelo.trim().isEmpty()) {
-            System.out.println("ERROR, el modelo no puede estar vacío");
+            System.err.println("ERROR, el modelo no puede estar vacío");
             modelo = sc.nextLine();
         }
 
@@ -32,14 +32,14 @@ public class MenuCreacionVehiculo {
             System.out.print("Por favor, introduzca los caballos del vehículo: ");
 
             while (!sc.hasNextInt()) {
-                System.out.println("ERROR: los caballos deben ser un número mayor que 0");
+                System.err.println("ERROR: los caballos deben ser un número mayor que 0");
                 sc.next(); 
             }
 
             caballos = sc.nextInt();
 
             if (caballos <= 0) {
-                System.out.println("ERROR: los caballos deben ser mayores que 0");
+                System.err.println("ERROR: los caballos deben ser mayores que 0");
             }
         }
 

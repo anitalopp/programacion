@@ -34,7 +34,7 @@ public class MenuPrincipal {
 					break;
                 case 2:
                     MenuPropietario MenuPropietario = new MenuPropietario();
-                    MenuPropietario.mostrarMenu();
+                    MenuPropietario.muestraMenuPropietario();
                     break;
                 case 3:
                 	MenuCalcularPrecio MenuCalcularPrecio = new MenuCalcularPrecio();
@@ -52,7 +52,7 @@ public class MenuPrincipal {
 					System.out.println("Saliendo...");
 					break;
 				default:
-					System.out.println("Opción incorrecta: El número debe estar comprendido entre 1 y 3");
+					System.out.println("WARNING");
 				}
 			} while (opcion != 6);
 		}

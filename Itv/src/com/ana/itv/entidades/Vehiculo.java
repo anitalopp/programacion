@@ -91,10 +91,12 @@ public class Vehiculo {
 	}
 
 	public double calculaPrecioITV() {
-		double precioBase = 0;
 
-		try {
-			int caballos= Integer.parseInt(this.caballos);
+		double precioBase = 0.0;
+
+		int caballos = Integer.parseInt(this.caballos);
+
+		if (combustible.equalsIgnoreCase("Gasolina")) {
 
 			if (caballos <= 60) {
 				precioBase = 30;
@@ -105,23 +107,26 @@ public class Vehiculo {
 			} else {
 				precioBase = 100;
 			}
-		} catch (NumberFormatException e) {
-			System.err.println("Error al convertir la cantidad de caballos a un entero.");
-			return -1;
-		}
-
-		if ("diesel".equalsIgnoreCase(this.combustible)) {
-			precioBase *= 1.3;
+		} else if (combustible.equalsIgnoreCase("Diesel")) {
+			if (caballos <= 60) {
+				precioBase = 30 * 1.3;
+			} else if (caballos <= 120) {
+				precioBase = 50 * 1.3;
+			} else if (caballos <= 140) {
+				precioBase = 55 * 1.3;
+			} else {
+				precioBase = 100 * 1.3;
+			}
 		}
 		return precioBase;
 	}
-	
+
 	public Vehiculo(String matricula, String modelo, String caballos, String combustible) {
-			super();
-			this.matricula = matricula;
-			this.modelo = modelo;
-			this.caballos = caballos;
-			this.combustible = combustible;
-	System.out.println("Vehículo creado con éxito");
-		}
+		super();
+		this.matricula = matricula;
+		this.modelo = modelo;
+		this.caballos = caballos;
+		this.combustible = combustible;
+		System.out.println("Vehículo creado con éxito");
+	}
 }

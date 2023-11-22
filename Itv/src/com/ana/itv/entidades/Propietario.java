@@ -11,6 +11,7 @@ public class Propietario {
 		this.dni = dni;
 		this.nombre = nombre;
 		this.apellido = apellido;
+		System.out.println("Propietario creado con éxito");
 	}
 
 	public String getDni() {
