@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import com.ana.itv.entidades.Propietario;
 
-public class MenuPropietario {
+public class MenuCreacionPropietario {
 
 	public Propietario muestraMenuPropietario() {
 	        Scanner sc = new Scanner(System.in);
@@ -15,7 +15,7 @@ public class MenuPropietario {
 	        String dni = sc.nextLine();
 
 	        while (dni.trim().isEmpty()) {
-	            System.err.println("ERROR, el dni no puede estar vacía");
+	            System.err.println("ERROR, el dni no puede estar vacío");
 	            dni = sc.nextLine();
 	        }
 

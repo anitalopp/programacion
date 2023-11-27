@@ -1,27 +1,31 @@
 package com.ana.itv.entidades;
 
 public class Vehiculo {
-	public Vehiculo(String matricula, String modelo, String caballos, String combustible, String deficienciasLeves,
-			String deficienciasGraves, boolean revisionPasada, boolean revisionsuperada) {
-		super();
-		this.matricula = matricula;
-		this.modelo = modelo;
-		this.caballos = caballos;
-		this.combustible = combustible;
-		this.deficienciasLeves = deficienciasLeves;
-		this.deficienciasGraves = deficienciasGraves;
-		this.revisionPAsada = revisionPasada;
-		this.revisionsuperada = revisionsuperada;
-	}
-
+	
 	private String matricula;
 	private String modelo;
 	private String caballos;
 	private String combustible;
 	private String deficienciasLeves;
 	private String deficienciasGraves;
-	private boolean revisionPAsada;
-	private boolean revisionsuperada;
+	private boolean revisionPasada;
+	private boolean revisionSuperada;
+
+	  public Vehiculo(String matricula, String modelo, String caballos, String combustible,
+              String deficienciasLeves, String deficienciasGraves, boolean revisionPasada, boolean revisionSuperada) {
+		  this.matricula = matricula;
+		  this.modelo = modelo;
+		  this.caballos = caballos;
+		  this.combustible = combustible;
+		  this.deficienciasLeves = deficienciasLeves;
+		  this.deficienciasGraves = deficienciasGraves;
+		  this.revisionPasada = revisionPasada;
+		  this.revisionSuperada = revisionSuperada;
+}
+
+//		public static boolean hayVehiculoCreado() {
+//			return matricula != null && !matricula.isEmpty();
+//		}
 
 	public String getMatricula() {
 		return matricula;
@@ -71,20 +75,20 @@ public class Vehiculo {
 		this.deficienciasGraves = deficienciasGraves;
 	}
 
-	public boolean isRevisionPAsada() {
-		return revisionPAsada;
+	public boolean isRevisionPasada() {
+		return revisionPasada;
 	}
 
-	public void setRevisionPAsada(boolean revisionPAsada) {
-		this.revisionPAsada = revisionPAsada;
+	public void setRevisionPasada(boolean revisionPAsada) {
+		this.revisionPasada = revisionPAsada;
 	}
 
-	public boolean isRevisionsuperada() {
-		return revisionsuperada;
+	public boolean isRevisionSuperada() {
+		return revisionSuperada;
 	}
 
-	public void setRevisionsuperada(boolean revisionsuperada) {
-		this.revisionsuperada = revisionsuperada;
+	public void setRevisionSuperada(boolean revisionsuperada) {
+		this.revisionSuperada = revisionsuperada;
 	}
 
 	public void metodoEspecifico() {
@@ -128,5 +132,7 @@ public class Vehiculo {
 		this.caballos = caballos;
 		this.combustible = combustible;
 		System.out.println("Vehículo creado con éxito");
+		System.out.println();
 	}
+
 }

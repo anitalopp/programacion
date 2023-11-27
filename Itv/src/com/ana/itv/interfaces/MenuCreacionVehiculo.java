@@ -11,11 +11,22 @@ public class MenuCreacionVehiculo {
 
         System.out.println("*MENÚ CREACIÓN DE VEHÍCULO*");
 
-        System.out.print("Por favor, introduzca la matrícula: ");
+        if (Vehiculo.hayVehiculoCreado()) {
+            System.err.println("WARNING: Hay ya un vehículo creado, si continúa los datos del mismo se perderán.");
+            System.out.println("Desea continuar (S/N)");
+
+            char respuesta = sc.next().charAt(0);
+
+            if (respuesta != 'S' && respuesta != 's') {
+                return null;
+            }
+        }
+
+        System.out.print("Por favor, introduzca la matrícula del vehículo: ");
         String matricula = sc.nextLine();
 
         while (matricula.trim().isEmpty()) {
-            System.err.println("ERROR, la matrícula no puede estar vacía");
+            System.err.println("ERROR: La matrícula no puede estar vacía. Introduzca de nuevo los datos");
             matricula = sc.nextLine();
         }
 
@@ -23,7 +34,7 @@ public class MenuCreacionVehiculo {
         String modelo = sc.nextLine();
 
         while (modelo.trim().isEmpty()) {
-            System.err.println("ERROR, el modelo no puede estar vacío");
+            System.err.println("ERROR: El modelo no puede estar vacío. Introduzca de nuevo los datos");
             modelo = sc.nextLine();
         }
 
@@ -32,25 +43,26 @@ public class MenuCreacionVehiculo {
             System.out.print("Por favor, introduzca los caballos del vehículo: ");
 
             while (!sc.hasNextInt()) {
-                System.err.println("ERROR: los caballos deben ser un número mayor que 0");
-                sc.next(); 
+                System.err.println("ERROR: Los caballos deben ser un número mayor que 0. Introduzca de nuevo los datos");
+                sc.next(); // Limpiar el buffer del scanner
             }
 
             caballos = sc.nextInt();
 
             if (caballos <= 0) {
-                System.err.println("ERROR: los caballos deben ser mayores que 0");
+                System.err.println("ERROR: Los caballos deben ser mayores que 0");
             }
         }
 
-        sc.nextLine(); 
+        sc.nextLine(); // Limpiar el buffer del scanner
 
         String combustible = "";
         while (!combustible.equals("diesel") && !combustible.equals("gasolina")) {
             System.out.print("Por favor, introduzca el combustible del vehículo (diesel o gasolina): ");
             combustible = sc.nextLine().trim().toLowerCase();
+
             if (!combustible.equals("diesel") && !combustible.equals("gasolina")) {
-                System.out.println("Debe introducir Diesel o Gasolina");
+                System.err.println("ERROR: Debe introducir Diesel o Gasolina");
             }
         }
 
@@ -58,4 +70,3 @@ public class MenuCreacionVehiculo {
         return vehiculo;
     }
 }
-//SptintBoot
