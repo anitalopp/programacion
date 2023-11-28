@@ -48,8 +48,4 @@ public class MenuPasarItv {
 			System.out.println("Opción no válida");
 		}
 	}
-
-	public void mostrarMenu() {
-		
-	}
 }
