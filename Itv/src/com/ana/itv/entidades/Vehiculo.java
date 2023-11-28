@@ -1,7 +1,7 @@
 package com.ana.itv.entidades;
 
 public class Vehiculo {
-	
+
 	private String matricula;
 	private String modelo;
 	private String caballos;
@@ -11,21 +11,17 @@ public class Vehiculo {
 	private boolean revisionPasada;
 	private boolean revisionSuperada;
 
-	  public Vehiculo(String matricula, String modelo, String caballos, String combustible,
-              String deficienciasLeves, String deficienciasGraves, boolean revisionPasada, boolean revisionSuperada) {
-		  this.matricula = matricula;
-		  this.modelo = modelo;
-		  this.caballos = caballos;
-		  this.combustible = combustible;
-		  this.deficienciasLeves = deficienciasLeves;
-		  this.deficienciasGraves = deficienciasGraves;
-		  this.revisionPasada = revisionPasada;
-		  this.revisionSuperada = revisionSuperada;
-}
-
-//		public static boolean hayVehiculoCreado() {
-//			return matricula != null && !matricula.isEmpty();
-//		}
+	public Vehiculo(String matricula, String modelo, String caballos, String combustible, String deficienciasLeves,
+			String deficienciasGraves, boolean revisionPasada, boolean revisionSuperada) {
+		this.matricula = matricula;
+		this.modelo = modelo;
+		this.caballos = caballos;
+		this.combustible = combustible;
+		this.deficienciasLeves = deficienciasLeves;
+		this.deficienciasGraves = deficienciasGraves;
+		this.revisionPasada = revisionPasada;
+		this.revisionSuperada = revisionSuperada;
+	}
 
 	public String getMatricula() {
 		return matricula;
@@ -111,6 +107,7 @@ public class Vehiculo {
 			} else {
 				precioBase = 100;
 			}
+
 		} else if (combustible.equalsIgnoreCase("Diesel")) {
 			if (caballos <= 60) {
 				precioBase = 30 * 1.3;
@@ -122,6 +119,7 @@ public class Vehiculo {
 				precioBase = 100 * 1.3;
 			}
 		}
+		
 		return precioBase;
 	}
 
@@ -135,4 +133,7 @@ public class Vehiculo {
 		System.out.println();
 	}
 
+	public static boolean hayVehiculoCreado() {
+		return false;
+	}
 }

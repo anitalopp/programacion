@@ -7,7 +7,6 @@ public class Propietario {
 	private String apellido;
 
 	public Propietario(String dni, String nombre, String apellido) {
-		super();
 		this.dni = dni;
 		this.nombre = nombre;
 		this.apellido = apellido;
