@@ -1,22 +1,22 @@
-import java.util.Scanner;
+import java.util.Scanner;  // Importa la clase Scanner para la entrada de datos desde el teclado.
 
-import com.ana.itv.entidades.Propietario;
-import com.ana.itv.entidades.Vehiculo;
-import com.ana.itv.interfaces.EmisionInforme;
-import com.ana.itv.interfaces.MenuCreacionPropietario;
-import com.ana.itv.interfaces.MenuCreacionVehiculo;
-import com.ana.itv.interfaces.MenuPasarItv;
+import com.ana.itv.entidades.Propietario;  // Importa la clase Propietario desde el paquete com.ana.itv.entidades.
+import com.ana.itv.entidades.Vehiculo;  // Importa la clase Vehiculo desde el paquete com.ana.itv.entidades.
+import com.ana.itv.interfaces.EmisionInforme;  // Importa la interfaz EmisionInforme desde el paquete com.ana.itv.interfaces.
+import com.ana.itv.interfaces.MenuCreacionPropietario;  // Importa la interfaz MenuCreacionPropietario desde el paquete com.ana.itv.interfaces.
+import com.ana.itv.interfaces.MenuCreacionVehiculo;  // Importa la interfaz MenuCreacionVehiculo desde el paquete com.ana.itv.interfaces.
+import com.ana.itv.interfaces.MenuPasarItv;  // Importa la interfaz MenuPasarItv desde el paquete com.ana.itv.interfaces.
 
 public class MenuPrincipal {
 
-	private Vehiculo vehiculo;
-	private Propietario propietario;
+	private Vehiculo vehiculo;  // Declaración de la variable vehiculo que representa un vehículo.
+	private Propietario propietario;  // Declaración de la variable propietario que representa un propietario.
 
 	public void mostrarMenu() {
 
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);  // Creación de un objeto Scanner para la entrada de datos.
 
-		int opcion = 0;
+		int opcion = 0;  // Declaración de la variable opcion que almacenará la opción seleccionada por el usuario.
 
 		do {
 			System.out.println("*******APLICACIÓN ITV*******");
@@ -28,8 +28,8 @@ public class MenuPrincipal {
 			System.out.println("5. Imprimir informe de ITV");
 			System.out.println("6. Salir de la aplicación ITV");
 
-			opcion = sc.nextInt();
-			sc.nextLine(); 
+			opcion = sc.nextInt();  // Lee la opción seleccionada por el usuario.
+			sc.nextLine();  // Limpia el buffer de entrada.
 
 			switch (opcion) {
 			case 1:
@@ -110,15 +110,15 @@ public class MenuPrincipal {
 	}
 
 	private boolean hayVehiculoCreado() {
-		return vehiculo != null;
+		return vehiculo != null;  // Verifica si se ha creado un vehículo.
 	}
 
 	private boolean hayPropietarioCreado() {
-		return propietario != null;
+		return propietario != null;  // Verifica si se ha creado un propietario.
 	}
 
 	public static void main(String[] args) {
-		MenuPrincipal menu = new MenuPrincipal();
-		menu.mostrarMenu();
+		MenuPrincipal menu = new MenuPrincipal();  // Creación de un objeto MenuPrincipal.
+		menu.mostrarMenu();  // Llamada al método mostrarMenu para iniciar la aplicación.
 	}
 }
