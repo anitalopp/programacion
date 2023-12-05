@@ -5,9 +5,7 @@ import com.ana.taller.entidades.Coche;
 import com.ana.taller.entidades.Neumaticos;
 import com.ana.taller.interfaces.MenuCreacionCliente;
 import com.ana.taller.interfaces.MenuCreacionCoche;
-import com.ana.taller.interfaces.MenuCreacionFactura;
-import com.ana.taller.interfaces.MenuCreacionNeumaticos;
-import com.ana.taller.interfaces.MenuServicioCambioRuedas;
+import com.ana.taller.interfaces.MenuCambioRuedas;
 
 public class MenuPrincipal {
 	private Cliente cliente;
@@ -40,8 +38,10 @@ public class MenuPrincipal {
 				} else {
 					MenuCreacionCliente menuCreacionCliente = new MenuCreacionCliente();
 					cliente = menuCreacionCliente.muestraMenuCreacionCliente();
+					System.out.println("klsfnkl");
 				}
 				break;
+
 			case 2:
 				if (hayCocheCreado()) {
 					System.out.println("Ya se ha creado un coche");
@@ -49,28 +49,11 @@ public class MenuPrincipal {
 					MenuCreacionCoche menuCreacionCoche = new MenuCreacionCoche();
 					coche = menuCreacionCoche.muestraMenuCreacionCoche();
 				}
+
 				break;
-			case 3:
-				if (hayCocheCreado()) {
-				} else {
-					MenuServicioCambioRuedas MenuServicioCambioRuedas = new MenuServicioCambioRuedas();
-				}
-				
-			case 4:
-				if (hayFacturaCreada()) {
-					MenuCreacionFactura MenuCreacionFactura = new MenuCreacionFactura();
-					Object factura = MenuCreacionFactura.muestraMenuCreacionFactura();
-				} else {
-					System.err.println("DEBE CREAR ANTES UN COCHE");
-				}
-			
 			}
 
 		} while (opcion != 5);
-	}
-
-	private boolean hayFacturaCreada() {
-		return false;
 	}
 
 	private boolean hayClienteCreado() {

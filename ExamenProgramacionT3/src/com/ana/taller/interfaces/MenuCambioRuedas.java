@@ -5,7 +5,7 @@ import com.ana.taller.entidades.Cliente;
 import com.ana.taller.entidades.Coche;
 import com.ana.taller.entidades.Neumaticos;
 
-public class MenuServicioCambioRuedas {
+public class MenuCambioRuedas {
 
 	public void muestraMenuServicioCambioRuedas() {
 

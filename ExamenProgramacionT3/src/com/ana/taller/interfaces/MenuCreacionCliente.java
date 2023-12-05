@@ -10,16 +10,17 @@ public class MenuCreacionCliente {
 		
 	        Scanner sc = new Scanner(System.in);
 
-	        System.out.print("Dígame el dni del cliente");
+	        System.out.println("Dígame el dni del clienteww");
 	        String dni = sc.nextLine();
     
-	        System.out.print("Dígame el nombre del cliente");
+	        System.out.println("Dígame el nombre del cliente");
 	        String nombre = sc.nextLine();
 
-	        System.out.print("Dígame la edad del cliente");
+	        System.out.println("Dígame la edad del cliente");
 	        int edad = sc.nextInt();
+	        sc.nextLine();
 	        
-	        System.out.print("Dígame el dni del cliente");
+	        System.out.println("Dígame el dni del cliente");
 	        String ciudad = sc.nextLine();
 	        
 			Cliente cliente = new Cliente(dni, nombre, edad, ciudad);
