@@ -1,3 +1,5 @@
+package com.herencia;
+
 public class Perro extends Animal {
     private String raza;
 
@@ -14,7 +16,6 @@ public class Perro extends Animal {
     }
 
     // Sobrescritura del método de la superclase Animal
-    @Override
     public void emitirSonido() {
         System.out.println("Guau, guau (sonido de un perro)");
     }

@@ -1,3 +1,5 @@
+package com.herencia;
+
 public class Main {
     public static void main(String[] args) {
         // Crear una instancia de la subclase Perro

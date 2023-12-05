@@ -1,3 +1,5 @@
+package com.herencia;
+
 public class Animal {
     private String nombre;
 
