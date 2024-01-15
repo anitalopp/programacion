@@ -26,7 +26,7 @@ public class ArrayUtils {
 			System.out.println();
 		}
 	}
-
+//1
 	public static int sumarArray(int[][] arrayBidimensional) {
 		int suma = 0;
 
@@ -40,7 +40,7 @@ public class ArrayUtils {
 
 		return suma;
 	}
-
+//2
 	public static int obtenerMayor(int[][] array) {
 		int mayor = array[0][0];
 		for (int[] fila : array) {
@@ -49,11 +49,10 @@ public class ArrayUtils {
 					mayor = elemento;
 				}
 			}
-			System.out.println("El número mayor es: " + mayor);
 		}
 		return mayor;
 	}
-
+//3
 	public static void diagonalPrincipal(int[][] arrayBidimensional) {
 		System.out.println("Diagonal Principal:");
 		for (int i = 0; i < arrayBidimensional.length; i++) {
@@ -61,7 +60,7 @@ public class ArrayUtils {
 		}
 		System.out.println();
 	}
-
+//4
 	public static void diagonalSecundaria(int[][] arrayBidimensional) {
 		System.out.println("Diagonal Secundaria:");
 		for (int i = 0; i < arrayBidimensional.length; i++) {
@@ -69,7 +68,7 @@ public class ArrayUtils {
 		}
 		System.out.println();
 	}
-
+//5
 	public static void matrizTranspuesta(int[][] arrayBidimensional) {
 		System.out.println("Matriz Transpuesta:");
 		for (int i = 0; i < arrayBidimensional[0].length; i++) {
@@ -79,20 +78,20 @@ public class ArrayUtils {
 			System.out.println();
 		}
 	}
+//6
+	public static double calcularMedia(int[][] arrayBidimensional) {
+	    int totalElementos = arrayBidimensional.length * arrayBidimensional[0].length;
+	    int suma = 0;
 
-	public static double calcularPromedio(int[][] arrayBidimensional) {
-		int totalElementos = arrayBidimensional.length * arrayBidimensional[0].length;
-		int suma = 0;
+	    for (int[] fila : arrayBidimensional) {
+	        for (int elemento : fila) {
+	            suma += elemento;
+	        }
+	    }
 
-		for (int[] fila : arrayBidimensional) {
-			for (int elemento : fila) {
-				suma += elemento;
-			}
-		}
-
-		return (double) suma / totalElementos;
+	    return (double) suma / totalElementos;
 	}
-
+//7
 	public static void contarParesImpares(int[][] arrayBidimensional) {
 		int pares = 0;
 		int impares = 0;
@@ -110,7 +109,7 @@ public class ArrayUtils {
 		System.out.println("Cantidad de números pares: " + pares);
 		System.out.println("Cantidad de números impares: " + impares);
 	}
-
+//8
 	public static void mostrarBorde(int[][] arrayBidimensional) {
 		System.out.println("Borde de la matriz:");
 		for (int i = 0; i < arrayBidimensional.length; i++) {
@@ -124,7 +123,7 @@ public class ArrayUtils {
 			System.out.println();
 		}
 	}
-
+//9
 	public static void sumaFila(int[][] arrayBidimensional) {
 		System.out.println("Suma de cada fila:");
 		for (int i = 0; i < arrayBidimensional.length; i++) {
@@ -135,7 +134,7 @@ public class ArrayUtils {
 			System.out.println("Fila " + i + ": " + sumaFila);
 		}
 	}
-
+//10
 	public static void sumaColumna(int[][] arrayBidimensional) {
 		System.out.println("Suma de cada columna:");
 		for (int i = 0; i < arrayBidimensional[0].length; i++) {
@@ -146,7 +145,7 @@ public class ArrayUtils {
 			System.out.println("Columna " + i + ": " + sumaColumna);
 		}
 	}
-
+//11
 	public static void pequeñoFila(int[][] arrayBidimensional) {
 		System.out.println("Elemento más pequeño de cada fila:");
 		for (int i = 0; i < arrayBidimensional.length; i++) {
@@ -159,7 +158,7 @@ public class ArrayUtils {
 			System.out.println("Fila " + i + ": " + minimo);
 		}
 	}
-
+//12
 	public static void sumarDiagonales(int[][] arrayBidimensional) {
 		int sumaDiagonalPrincipal = 0;
 		int sumaDiagonalSecundaria = 0;
@@ -172,7 +171,7 @@ public class ArrayUtils {
 		System.out.println("Suma de la diagonal principal: " + sumaDiagonalPrincipal);
 		System.out.println("Suma de la diagonal secundaria: " + sumaDiagonalSecundaria);
 	}
-
+//13
 	public static boolean buscarNumero(int[][] arrayBidimensional, int numeroBuscar) {
 		for (int[] fila : arrayBidimensional) {
 			for (int elemento : fila) {
@@ -183,14 +182,14 @@ public class ArrayUtils {
 		}
 		return false;
 	}
-
+//14
 	public static void intercambiarFilas(int[][] arrayBidimensional) {
 		int[] temp = arrayBidimensional[0];
 		arrayBidimensional[0] = arrayBidimensional[arrayBidimensional.length - 1];
 		arrayBidimensional[arrayBidimensional.length - 1] = temp;
 		System.out.println("Elementos de la primera fila intercambiados con la última.");
 	}
-
+//15
 	public static int[] crearArrayConsecutivos() {
 		Scanner scanner = new Scanner(System.in);
 
@@ -204,7 +203,7 @@ public class ArrayUtils {
 
 		return arrayConsecutivos;
 	}
-
+//16
 	public static int[] crearArrayCerosUnos(int filas, int columnas) {
 		int[] arrayCerosUnos = new int[filas * columnas];
 
@@ -214,7 +213,7 @@ public class ArrayUtils {
 
 		return arrayCerosUnos;
 	}
-
+//17
 	public static boolean comprobarSimetria(int[][] arrayBidimensional) {
 		for (int i = 0; i < arrayBidimensional.length; i++) {
 			for (int j = 0; j < i; j++) {
@@ -225,7 +224,7 @@ public class ArrayUtils {
 		}
 		return true;
 	}
-
+//18
 	public static int[][] crearMatrizIdentidad(int filas, int columnas) {
 		int[][] matrizIdentidad = new int[filas][columnas];
 

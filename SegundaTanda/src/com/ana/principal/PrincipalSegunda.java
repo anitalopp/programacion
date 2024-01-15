@@ -53,7 +53,8 @@ public class PrincipalSegunda {
 				break;
 			case 2:
                 int mayor = ArrayUtils.obtenerMayor(arrayBidimensional);
-				break;
+				System.out.println("El número mayor es: " + mayor);
+                break;
 			case 3:
                 ArrayUtils.diagonalPrincipal(arrayBidimensional);
 				System.out.println(); 
@@ -65,9 +66,9 @@ public class PrincipalSegunda {
                 ArrayUtils.matrizTranspuesta(arrayBidimensional);
 				break;
 			case 6:
-				double promedio = ArrayUtils.calcularPromedio(arrayBidimensional);
-				System.out.println("La media de los elementos del array es: "); 
-				break;
+			    double media = ArrayUtils.calcularMedia(arrayBidimensional);
+			    System.out.println("La media de los elementos del array es: " + media);
+			    break;
 			case 7:
                 ArrayUtils.contarParesImpares(arrayBidimensional);
                 break;
@@ -120,7 +121,7 @@ public class PrincipalSegunda {
 				System.out.println("Introduce un numero comprendido entre el 1 y el 11");
 			}
 
-		} while (opcion != 11);
+		} while (opcion != 19);
 
 	}
 }
