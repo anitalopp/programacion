@@ -87,6 +87,9 @@ public class PrincipalSegunda {
             case 12:
                 ArrayUtils.sumarDiagonales(arrayBidimensional);
                 break;
+            case 13:
+            	ArrayUtils.buscarNumero(arrayBidimensional, numeroBuscar);
+            	break;
             case 14:
                 ArrayUtils.intercambiarFilas(arrayBidimensional);
                 ArrayUtils.imprimirArray(arrayBidimensional);
