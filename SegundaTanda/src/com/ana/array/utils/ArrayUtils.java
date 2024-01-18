@@ -1,6 +1,7 @@
 package com.ana.array.utils;
 
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 public class ArrayUtils {
@@ -51,6 +52,7 @@ public class ArrayUtils {
 				}
 			}
 		}
+		System.out.println("El número mayor es: " + mayor);
 		return mayor; //devuelve el mayor
 	}
 
@@ -182,23 +184,25 @@ public class ArrayUtils {
 	}
 
 //13
-	public static boolean buscarNumero(int[][] arrayBidimensional, int numeroBuscar) {
-		System.out.println("Ingrese el número a buscar:");
-		int numeroBuscar = scanner.next
-		Scanner scanner = new Scanner(System.in);
-
-		for (int i = 0; i < arrayBidimensional.length; i++) {
-			for (int j = 0; j < arrayBidimensional[i].length; j++) {
-				if (arrayBidimensional[i][j] == numeroBuscar) {
-					System.out.println("Número encontrado en la posición: Fila " + i + ", Columna " + j);
-					return true;
+	public static int buscarNumero(int[][] arrayBidimensional, Scanner scanner) {
+        boolean encontrado = false;
+        
+        System.out.println("Ingrese el número a buscar");
+        int numeroBuscado = scanner.nextInt();
+        
+        for (int i = 0; i < arrayBidimensional.length; i++) {
+        	for (int j = 0; j < arrayBidimensional.length; j++) {
+				if (arrayBidimensional[i][j] == numeroBuscado) {
+					encontrado = true;
+					System.out.println("Número encontrado en la posición [" + i + "] [" + j + "]" );
 				}
 			}
-		}
-
-		System.out.println("Número no encontrado en la matriz.");
-		return false;
-	}
+        }
+        if (!encontrado) {
+        	System.out.println("Número no encontrado en el array");
+        }
+        return numeroBuscado;
+    }
 
 //14
 	public static void intercambiarFilas(int[][] arrayBidimensional) {
@@ -218,20 +222,30 @@ public class ArrayUtils {
 		for (int i = 0; i < longitud; i++) {
 			arrayConsecutivos[i] = i + 1;
 		}
-
+		System.out.println("Array con números consecutivos:");
+		for (int i = 0; i < arrayConsecutivos.length; i++) {
+			System.out.println(arrayConsecutivos[i]);
+		}
 		return arrayConsecutivos;
 	}
 
 //16
 	public static int[] crearArrayCerosUnos(int filas, int columnas) {
-		int[] arrayCerosUnos = new int[filas * columnas];
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Ingrese la longitud del array:");
+		int longitud = scanner.nextInt();
+		int[] arrayCerosUnos = new int[longitud];
 
-		for (int i = 0; i < arrayCerosUnos.length; i++) {
+		for (int i = 0; i < longitud; i++) {
 			arrayCerosUnos[i] = i % 2;
 		}
-
+		System.out.println("Array con números consecutivos:");
+		for (int i = 0; i < arrayCerosUnos.length; i++) {
+			System.out.println(arrayCerosUnos[i]);
+		}
 		return arrayCerosUnos;
 	}
+
 
 //17
 	public static boolean comprobarSimetria(int[][] arrayBidimensional) {
@@ -258,3 +272,17 @@ public class ArrayUtils {
 		return matrizIdentidad;
 	}
 }
+
+
+//Scanner scanner = new Scanner(System.in);
+//System.out.println("Ingrese el número de filas:");
+//int numFilas = scanner.nextInt();
+//System.out.println("Ingrese el número de columnas:");
+//int numColumnas = scanner.nextInt();
+//
+//Random numeroRandom = new Random();
+//int nyumeros;
+//int[][] arrayBidimensional = ArrayUtils.crearArrayBidimensional(numFilas, numColumnas);
+//ArrayUtils.imprimirArray(arrayBidimensional);
+//int opcion;
+//do {

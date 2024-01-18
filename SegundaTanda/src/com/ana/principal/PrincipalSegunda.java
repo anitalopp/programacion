@@ -9,14 +9,25 @@ public class PrincipalSegunda {
 
 	public static void main(String[] args) {
 
-		Scanner scanner = new Scanner(System.in);
+	Scanner scanner = new Scanner(System.in);
 		System.out.println("Ingrese el número de filas:");
 		int numFilas = scanner.nextInt();
 		System.out.println("Ingrese el número de columnas:");
 		int numColumnas = scanner.nextInt();
-		scanner.nextLine();
+		
 		Random numeroRandom = new Random();
-		int[][] arrayBidimensional = ArrayUtils.crearArrayBidimensional(numFilas, numColumnas);
+		int numeros;
+		
+		int[][] arrayBidimensional = new int [numFilas][numColumnas];
+		
+		for (int i = 0; i < arrayBidimensional.length; i++) {
+		    for (int j = 0; j < arrayBidimensional[i].length; j++) {
+		        numeros = numeroRandom.nextInt(100);
+		        arrayBidimensional[i][j] = numeros;
+		    }
+		}
+
+		
 		ArrayUtils.imprimirArray(arrayBidimensional);
 		int opcion;
 		do {
@@ -49,11 +60,10 @@ public class PrincipalSegunda {
 
 			switch (opcion) {
 			case 1:
-                int suma = ArrayUtils.sumarArray(arrayBidimensional);
+                ArrayUtils.sumarArray(arrayBidimensional);
 				break;
 			case 2:
-                int mayor = ArrayUtils.obtenerMayor(arrayBidimensional);
-				System.out.println("El número mayor es: " + mayor);
+                ArrayUtils.obtenerMayor(arrayBidimensional);
                 break;
 			case 3:
                 ArrayUtils.diagonalPrincipal(arrayBidimensional);
@@ -88,21 +98,16 @@ public class PrincipalSegunda {
                 ArrayUtils.sumarDiagonales(arrayBidimensional);
                 break;
             case 13:
-            	ArrayUtils.buscarNumero(arrayBidimensional, numeroBuscar);
-            	break;
+                ArrayUtils.buscarNumero(arrayBidimensional, scanner);
+                break;
             case 14:
                 ArrayUtils.intercambiarFilas(arrayBidimensional);
-                ArrayUtils.imprimirArray(arrayBidimensional);
                 break;
             case 15:
                 int[] arrayConsecutivos = ArrayUtils.crearArrayConsecutivos();
-                System.out.println("Array de números consecutivos:");
-                ArrayUtils.imprimirArray(arrayBidimensional);
                 break;
             case 16:
                 int[] arrayCerosUnos = ArrayUtils.crearArrayCerosUnos(arrayBidimensional.length, arrayBidimensional[0].length);
-                System.out.println("Array de ceros y unos:");
-                ArrayUtils.imprimirArray(arrayBidimensional);
                 break;
             case 17:
                 boolean esSimetrica = ArrayUtils.comprobarSimetria(arrayBidimensional);
