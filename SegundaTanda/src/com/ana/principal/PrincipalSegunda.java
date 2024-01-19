@@ -104,10 +104,10 @@ public class PrincipalSegunda {
                 ArrayUtils.intercambiarFilas(arrayBidimensional);
                 break;
             case 15:
-                int[] arrayConsecutivos = ArrayUtils.crearArrayConsecutivos();
+                ArrayUtils.crearArrayConsecutivos();
                 break;
             case 16:
-                int[] arrayCerosUnos = ArrayUtils.crearArrayCerosUnos(arrayBidimensional.length, arrayBidimensional[0].length);
+                ArrayUtils.crearArrayCerosUnos(arrayBidimensional.length, arrayBidimensional[0].length);
                 break;
             case 17:
                 boolean esSimetrica = ArrayUtils.comprobarSimetria(arrayBidimensional);
@@ -118,7 +118,7 @@ public class PrincipalSegunda {
                 }
                 break;
             case 18:
-                int[][] matrizIdentidad = ArrayUtils.crearMatrizIdentidad(arrayBidimensional.length, arrayBidimensional[0].length);
+                ArrayUtils.crearMatrizIdentidad(arrayBidimensional.length, arrayBidimensional[0].length);
                 System.out.println("Matriz identidad:");
                 ArrayUtils.imprimirArray(arrayBidimensional);
                 break;
@@ -126,7 +126,7 @@ public class PrincipalSegunda {
 				System.out.println("Salir");
 				return;
 			default:
-				System.out.println("Introduce un numero comprendido entre el 1 y el 11");
+				System.out.println("Error");
 			}
 
 		} while (opcion != 19);
