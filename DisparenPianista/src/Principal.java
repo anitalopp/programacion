@@ -57,7 +57,7 @@ public class Principal {
         for (int i = 0; i < tablero.length; i++) { //i recorre las lineas tablero o array
             for (int j = 0; j < tablero[i].length; j++) { // recorre las columnas tablero o array
                 if (tablero[i][j] == 'X') { //verifica si el numero de fila o columna coincide con un disparo ya hecho 
-                    System.out.print("X ");
+                    System.out.print("X                                 ");
                 } else {
                     System.out.print(tablero[i][j] + " "); //si el valor no es x vuelve a imprimir el tablero normal
                 }
