@@ -14,7 +14,7 @@ public class PrincipalPrimera {
         int numIntroducidos = scanner.nextInt(); // lee el número introducido y lo almacena en numIntroducidos
         scanner.nextLine(); // limpia el buffer de entrada del scanner para evitar problemas al leer la siguiente entrada
         Random numeroRandom = new Random(); // crea un objeto para generar numeros aleatorios
-        int arrayNumeros[] = new int[numIntroducidos]; // crea un array con el tamaño especificado
+        int arrayNumeros[] = new int[numIntroducidos]; // CREACION DEL ARRAY
         for (int i = 0; i < arrayNumeros.length; i++) {
             int numeroAleatorio = numeroRandom.nextInt(100);
             arrayNumeros[i] = numeroAleatorio;
