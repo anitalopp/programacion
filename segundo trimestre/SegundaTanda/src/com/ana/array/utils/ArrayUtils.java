@@ -31,9 +31,9 @@ public class ArrayUtils {
 //1
 	public static int sumarArray(int[][] arrayBidimensional) {
 		int suma = 0;
-		for (int i = 0; i < arrayBidimensional.length; i++) { //recorre las filas de la matriz
-			for (int j = 0; j < arrayBidimensional[i].length; j++) { //recorre las matrices de la matriz
-				suma += arrayBidimensional[i][j];
+		for (int i = 0; i < tabla.length; i++) { //recorre las filas de la matriz
+			for (int j = 0; j < tabla[i].length; j++) { //recorre las matrices de la matriz
+				suma += tabla[i][j];
 			}
 		}
 
