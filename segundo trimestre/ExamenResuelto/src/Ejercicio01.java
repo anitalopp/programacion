@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ejercicio {
+public class Ejercicio01 {
     
     public static void main (String[] args) {
         System.out.println("====================");
@@ -11,7 +11,8 @@ public class Ejercicio {
         
         System.out.println("Dígame un número");
         
-        int numero = sc.nextInt();
+        
+        Integer numero = sc.nextInt();
         sc.nextLine(); // Consume the newline character
         
         String[] array1 = new String[numero];
@@ -33,5 +34,8 @@ public class Ejercicio {
         }
         System.out.println("la suma es: " + resultado);
     }
+    
+    
+    
 }
-
+	
