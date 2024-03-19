@@ -22,3 +22,9 @@ public class EscribirArchivo {
         }
     }
 }
+
+
+//Escribe un programa que lea un archivo de texto y muestre su contenido 
+//en la consola. 
+//Luego, modifica el programa para que escriba cierto texto en un nuevo 
+//archivo.
