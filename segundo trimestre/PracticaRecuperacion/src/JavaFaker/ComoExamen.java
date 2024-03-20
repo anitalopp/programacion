@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
-public class RandomNameRemoval {
+public class ComoExamen {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Faker faker = new Faker();
