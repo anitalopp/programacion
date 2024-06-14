@@ -6,7 +6,9 @@ public class Alumno {
 	private String dni;
 	private String nombreApellido;
 	private Integer edad;
-
+	
+	
+	List <Nota> notas = new ArrayList<>();
 	public Alumno(String dni, String nombreApellido, int edad) {
 		super();
 		this.dni = dni;
@@ -14,10 +16,15 @@ public class Alumno {
 		this.edad = edad;
 	}
 
+	
+
 	@Override
 	public String toString() {
-		return "Alumno [dni=" + dni + ", nombreApellido=" + nombreApellido + ", edad=" + edad;
+		return "Alumno [dni=" + dni + ", nombreApellido=" + nombreApellido + ", edad=" + edad + ", notas=" + notas
+				+ "]";
 	}
+
+
 
 	public String getDni() {
 		return dni;
